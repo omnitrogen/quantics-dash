@@ -21,7 +21,8 @@ __meta__ = {
 
 position = Vector2( 200, 525 )
 script = ExtResource( 4 )
-speed = 10
+speedX = 10
+speedY = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 
