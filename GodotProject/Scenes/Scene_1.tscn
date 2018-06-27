@@ -2,12 +2,8 @@
 
 [ext_resource path="res://Scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tiles.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/player.png" type="Texture" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=4]
 
 [node name="World" type="Node2D" index="0"]
 
@@ -21,28 +17,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" type="KinematicBody2D" parent="." index="1"]
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 25, 525 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
-
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Player" index="1"]
-
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
+script = ExtResource( 4 )
+speed = 10
 
 
