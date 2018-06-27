@@ -22,7 +22,7 @@ func generateGround(length):
 	var position = Vector2()
 	$"Ground".add_child(platform)
 	for i in range(length):
-		position.x = i*platform.get_scale().x*50
+		position.x = i*platform.get_scale().x*50+25
 		position.y = get_viewport_rect().size.y-25
 		platform = platform.duplicate()
 		platform.position = position
