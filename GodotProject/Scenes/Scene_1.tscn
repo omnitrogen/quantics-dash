@@ -15,49 +15,32 @@ script = ExtResource( 1 )
 tiles = ExtResource( 2 )
 scene = null
 
-[node name="Player" type="RigidBody2D" parent="." index="0"]
+[node name="Ground" type="Node2D" parent="." index="0"]
 
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 25, 525 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-_sections_unfolded = [ "Angular", "Collision", "Linear", "Pickable", "Transform" ]
+collision/safe_margin = 0.08
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
 
-position = Vector2( 25, 525 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Player" index="1"]
 
-position = Vector2( 25, 525 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Ground" type="Node2D" parent="." index="1"]
-
 __meta__ = {
 "_edit_lock_": true
 }
