@@ -19,6 +19,7 @@ func _ready():
 func generateGround(length):
 	var platform = tiles.instance().get_node("./Ground/platform")
 	print(platform)
+	var position = Vector2()
 	for i in range(0,length):
 		position.x = i*platform.get_scale().x*25
 		position.y = get_viewport_rect().size.y-25
