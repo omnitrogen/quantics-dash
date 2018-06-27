@@ -1,5 +1,5 @@
-# -change-name-later-
+# QuanticsDash
+## Godot game
+**godot game incoming**
 
-godot game incoming
-
-t10foot & omnitrogen :rainbow:
+tanguymartinez & omnitrogen :rainbow:
