@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/platform.tscn" type="PackedScene" id=1]
+
+[node name="Tiles" type="Node2D" index="0"]
+
+[node name="Ground" type="Node2D" parent="." index="0"]
+
+[node name="platform" parent="Ground" index="0" instance=ExtResource( 1 )]
+
+
