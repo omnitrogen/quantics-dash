@@ -23,7 +23,6 @@ func generateGround(length):
 	for i in range(0,length):
 		position.x = i*platform.get_scale().x*25
 		position.y = get_viewport_rect().size.y-25
-		print(position)
+		platform = platform.duplicate()
 		platform.position = position
 		$"Ground".add_child(platform)
-		print(i)
